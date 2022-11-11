@@ -1,0 +1,73 @@
+<html>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 60%;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            /* justify-content: center; */
+        }
+        .swiper{
+            width: 80%;
+            height: fit-content;
+        }
+        .swiper-slide img{
+            width: 100%;
+        }
+        /* ตัวปุ่มเลื่อนซ้ายขวา */
+        .swiper.swiper-button-prev,.swiper.swiper-button-next{
+            color: #fff;         
+        }
+        /* ตัวปุ่มเล็กข้างล่าง */
+        .swiper .swiper-pagination-bullet-active{
+            background: #fff;
+        }
+    </style>
+    <link rel=stylesheet href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <body>
+        <div class="container">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href="carnival.html"><img src="imageslides/aston-martin.jpg"></a></div>
+                    <div class="swiper-slide"><a href="sneaker.html"><img src="imageslides/audi-rs-e-tron-gt.jpg"></a></div>
+                    <div class="swiper-slide"><a href="jone500.html"><img src="imageslides/maserati-mc20.jpg"></a></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+            </div>
+        </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+    // 3000 คือ milisecond
+        const swiper = new swiper('.swiper',{
+            autoplay:{
+                delay:3000,
+                disableOnInteraction: false,
+            },
+        // ให้มันวนลูปเรื่อยๆ
+        loop:true,
+        // ปุ่มเลื่อน
+        pagination:{
+            el:'.swiper-paganition',
+            clickable:true,
+        },
+
+        navigation:{
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',   
+        },
+
+        });
+
+    </script>
+    
+    </body>
+</html>
